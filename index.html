@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MavenMart</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <!-- URBANIST FONT  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+
+  <!-- BALOO BHAI FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&family=Urbanist:ital,wght@0,500;1,500&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <!-- TOP OF THE NOTCH -->
+
+  <div
+    class="bg-dark text-light d-flex justify-content-between align-items-center p-3 position-fixed top-0 start-0 w-100"
+    style="font-size: 0.8rem;">
+
+
+    <p class="mb-0 d-none d-md-block" style="margin: 0; margin-left: 10rem;">
+      Free Shipping 30-days return or refund policy
+    </p>
+
+    <!-- Links -->
+    <div class="d-flex gap-3" style="
+                  @media (max-width: 768px) {
+                      flex-direction: column; 
+                      align-items: center;}">
+
+      <a href="#" class="text-light text-decoration-none" style="
+                      font-size: 0.9rem; 
+                      margin-right: 1rem;
+                      @media (max-width: 576px) {
+                          margin-right: 0; 
+                          margin-bottom: 0.5rem;}">Sign In</a>
+      <a href="#" class="text-light text-decoration-none" style="
+                      font-size: 0.9rem; 
+                      margin-right: 10rem;
+                      @media (max-width: 576px) {
+                          margin-right: 0;}">Sign Up</a>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark  mt-5 sticky-top w-100">
+    <div class="container">
+      <a class="navbar-brand" href="#" style="display: flex; align-items: center;">
+        <img src="./images/logo.avif" alt="Logo" style="height: 50px;">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto" id="nav-ul">
+          <li class="nav-item ps-4 fw-semibold">
+            <a class="nav-link" href="#home" style="color: #000000;">Home</a>
+          </li>
+          <li class="nav-item ps-4 fw-semibold">
+            <a class="nav-link" href="#products" style="color: #000000;">Product</a>
+          </li>
+          <li class="nav-item ps-4 fw-semibold">
+            <a class="nav-link" href="#about" style="color: #000000;">About</a>
+          </li>
+          <li class="nav-item ps-4 fw-semibold">
+            <a class="nav-link" href="#contact" style="color: #000000;">Contact</a>
+          </li>
+          <li class="nav-item ps-4 fw-semibold">
+            <a id="cartValue" class="nav-link" href="./addtocart.html" style="color: #000000;">
+              <i class="fa-solid fa-cart-shopping"><span style="font-size: medium;"> 0</span></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- Hero section of the page -->
+  <div class="d-flex justify-content-center align-items-center" id="home_redirect"
+    style="background: url('./images/backgroundimage.svg') no-repeat center center; background-size: cover; height: 90vh; position: relative; z-index: 1;">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- Text Content Column -->
+        <div class="col-md-6 mb-4 mb-md-0">
+          <div class="text-left">
+            <p class="font-weight-bold" style="letter-spacing: 0.02rem;">Explore the Latest in Tech Industries</p>
+            <h1 class="font-weight-bold mb-3" style="letter-spacing: 0.02rem; color: #0a0f41;">Your Destination For <br>
+              Cutting-Edge Gadgets!</h1>
+            <p class="font-weight-bold" style="letter-spacing: 0.02rem; color: rgb(5, 5, 18);">
+              Welcome to MavenMart, your ultimate destination for cutting-edge gadgets! Explore the latest in tech
+              innovation and style with us. Shop now and discover a world of possibilities!
+            </p>
+            <a href="#products" class="btn btn-outline-dark btn-sm d-inline-block text-nowrap mx-1 my-2"
+              style="max-width: 21rem; font-weight: bold;">
+              Explore Our Products
+            </a>
+          </div>
+        </div>
+
+        <!-- Image Content Column -->
+        <div class="col-md-6">
+          <img src="./images/electronics.png" alt="Description of Image" class="img-fluid"
+            style="background: transparent;">
+        </div>
+      </div>
+    </div>
+    <!-- Wave Divider -->
+    <div
+      style="position: absolute; bottom: 0; left: 0; width: 100%; overflow: hidden; line-height: 0; transform: rotate(180deg);">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"
+        style="position: relative; display: block; width: 100%; height: 81px;">
+        <path
+          d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
+          opacity=".25" style="fill: #345cb9;"></path>
+        <path
+          d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
+          opacity=".5" style="fill: #558c94;"></path>
+        <path
+          d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
+          style="fill: #277e8e;"></path>
+      </svg>
+    </div>
+  </div>
+
+  <!-- Extra Content -->
+  <div class="container mt-3" style="padding: 0;">
+    <div class="row g-2">
+      <!-- Card 1 -->
+      <div class="col-12 col-md-4 d-flex justify-content-center">
+        <div class="card arc-effect"
+          style="border: none; width: 100%; max-width: 400px; height: 13.5rem; display: flex; flex-direction: row; align-items: center; margin: 0;">
+          <div class="card-body"
+            style="display: flex; flex-direction: row; align-items: center; padding: 1rem; height: 100%; margin: 0;">
+            <div style="flex: 2; padding-right: 1rem;">
+              <p style="margin: 0; font-size: small;">NEW YEAR SALE</p>
+              <h5 style="margin: 0.5rem 0; font-size: x-large; font-weight: bold;">Get an Extra 50% Off</h5>
+              <a href="#" style="color: #000000; font-weight: 550;">SHOP NOW</a>
+            </div>
+            <div style="flex: 1; display: flex; align-items: center; justify-content: center;">
+              <img src="./images/extra1.png" alt="Placeholder Image"
+                style="width: 100px; height: 100px; object-fit: cover;">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-12 col-md-4 d-flex justify-content-center">
+        <div class="card arc-effect"
+          style="border: none; width: 100%; max-width: 400px; height: 13.5rem; display: flex; flex-direction: row; align-items: center; margin: 0;">
+          <div class="card-body"
+            style="display: flex; flex-direction: row; align-items: center; padding: 1rem; height: 100%; margin: 0;">
+            <div style="flex: 2; padding-right: 1rem;">
+              <p style="margin: 0; font-size: small;">NEW YEAR SALE</p>
+              <h5 style="margin: 0.5rem 0; font-size: x-large; font-weight: bold;">40% Discount On Speakers</h5>
+              <a href="#" style="color: #000000; font-weight: 550;">SHOP NOW</a>
+            </div>
+            <div style="flex: 1; display: flex; align-items: center; justify-content: center;">
+              <img src="./images/extra2.png" alt="Placeholder Image"
+                style="width: 100px; height: 100px; object-fit: cover;">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-12 col-md-4 d-flex justify-content-center">
+        <div class="card arc-effect"
+          style="border: none; width: 100%; max-width: 400px; height: 13.5rem; display: flex; flex-direction: row; align-items: center; margin: 0;">
+          <div class="card-body"
+            style="display: flex; flex-direction: row; align-items: center; padding: 1rem; height: 100%; margin: 0;">
+            <div style="flex: 2; padding-right: 1rem;">
+              <p style="margin: 0; font-size: small;">NEW YEAR SALE</p>
+              <h5 style="margin: 0.5rem 0; font-size: x-large; font-weight: bold;">Get a Flat 50% Discount</h5>
+              <a href="#" style="color: #000000; font-weight: 550;">SHOP NOW</a>
+            </div>
+            <div style="flex: 1; display: flex; align-items: center; justify-content: center;">
+              <img src="./images/extra3.png" alt="Placeholder Image"
+                style="width: 100px; height: 100px; object-fit: cover;">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Some Policies and All -->
+  <div class="container" style="padding: 0; margin-top: 1rem;">
+    <div class="row g-2">
+      <!-- Container for Divs -->
+      <div class="col-12 d-flex flex-column flex-md-row py-4"
+        style="padding: 0; justify-content: space-between; background-color: #f8f9fa; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+        <!-- Div 1 -->
+        <div class="d-flex align-items-center p-3 mb-2 mb-md-0"
+          style="flex: 1; background-color: #ffffff; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); justify-content: center;">
+          <i class="fas fa-shipping-fast" style="font-size: 27px; margin-right: 15px; color: #154477;"></i>
+          <div>
+            <p style="margin: 0; font-size: medium; line-height: 1.5;font-weight: bold;">World-wide Shipping</p>
+            <p style="margin: 0; font-size: small; line-height: 1.5;font-weight: 550;">Order above 100$</p>
+          </div>
+        </div>
+
+        <!-- Div 2 -->
+        <div class="d-flex align-items-center p-3 mb-2 mb-md-0"
+          style="flex: 1; background-color: #ffffff; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);justify-content: center;">
+          <i class="fas fa-refresh" style="font-size: 27px; margin-right: 15px; color: #154477;"></i>
+          <div>
+            <p style="margin: 0; font-size: medium; line-height: 1.5;font-weight: bold;">Easy 30 Days Return</p>
+            <p style="margin: 0; font-size: small; line-height: 1.5;font-weight: 550;">Return Back in 7 Days</p>
+          </div>
+        </div>
+
+        <!-- Div 3 -->
+        <div class="d-flex align-items-center p-3 mb-2 mb-md-0"
+          style="flex: 1; background-color: #ffffff; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);justify-content: center;">
+          <i class="fas fa-hand-holding-usd" style="font-size: 27px; margin-right: 15px; color: #154477;"></i>
+          <div>
+            <p style="margin: 0; font-size: medium; line-height: 1.5;font-weight: bold;">Money Back Guarantee</p>
+            <p style="margin: 0; font-size: small; line-height: 1.5;font-weight: 550;">Guarantee with-in 30 Days</p>
+          </div>
+        </div>
+
+        <!-- Div 4 -->
+        <div class="d-flex align-items-center p-3"
+          style="flex: 1; background-color: #ffffff; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);justify-content: center;">
+          <i class="fas fa-headset" style="font-size: 27px; margin-right: 15px; color: #154477;"></i>
+          <div>
+            <p style="margin: 0; font-size: medium; line-height: 1.5;font-weight: bold;">Easy Online Support</p>
+            <p style="margin: 0; font-size: small; line-height: 1.5;font-weight: 550;">24/7 Any Time Support</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- OUR PRODUCT SECTION   -->
+
+  <section class="section-products container my-5" id="products_redirect"
+    style="padding: 2rem 0; background-color: #f8f9fa; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+    <div style="text-align: center; margin-bottom: 2rem;">
+      <h2 class="section-common--heading" style="font-size: 2rem; font-weight: 700; margin: 0; color: #0a0f41;">
+        Checkout MavenMart
+      </h2>
+    </div>
+
+    <section class="container" style="background-color: #fff; padding: 2rem; border-radius: 10px;">
+      <div id="productContainer" class="row"
+        style="display: flex; flex-wrap: wrap; gap: 1.5rem;justify-content: center;">
+        <!-- Products will be dynamically inserted here -->
+
+
+      </div>
+    </section>
+  </section>
+
+
+  <!-- TEMPLATE  -->
+
+  <template id="productTemplate">
+    <div class="cards" id="cardValue"
+      style="background-color: #fff8f8; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); padding: 15px; margin: 10px; box-sizing: border-box; width: 100%; max-width: 300px; display: flex; flex-direction: column;">
+
+      <article class="information [card] d-flex flex-column" style="width: 100%; box-sizing: border-box; flex-grow: 1;">
+        <span class="category"
+          style="font-size: 10px; background-color: #e0e0e0; color: #000000; padding: 5px 10px; border-radius: 12px; display: inline-block; margin-bottom: 14px;font-weight: 700;width: fit-content;">
+        </span>
+
+        <div class="d-flex flex-column justify-content-center align-items-center" style="flex-grow: 1;">
+          <div class="imageContainer" style="width: 100%; text-align: center;">
+            <img class="productImage" src="" alt="" style="width: 100%; max-width: 100%; border-radius: 8px;" />
+          </div>
+          <h2 class="productName" style="font-size: 1.5rem; font-weight: bold; margin: 10px 0;">
+          </h2>
+          <div class="productRating" style="color: #ff9d00; font-size: 10px;margin-bottom: 3px;">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <p class="productDescription" style="font-size: 14px; color: #666;font-weight: 650;"></p>
+          <div class="productPriceElement"
+            style="display: flex; flex-direction: row; align-items: center; margin:  0 0 0;">
+            <p class="productPrice" style="font-size: 20px; font-weight: bold; margin: 0 8px;"></p>
+            <p class="productActualPrice"
+              style="font-size: 16px; color: #010101; text-decoration: line-through; margin: 0;">
+            </p>
+          </div>
+          <div class="productStockElement"
+            style="display: flex; flex-direction: row; align-items: left; margin-top: 10px;">
+            <p class="productProperty" style="font-size: 16px; color: #000000; margin-right: 0.6rem;font-weight: 650;">
+              Total Stocks Available:</p>
+            <p class="productStock" style="font-size: 16px; margin: 0;font-weight: 600;"></p>
+          </div>
+
+          <div class="productQuantityElement d-flex align-items-center mb-3 w-100"
+            style="padding: 3px; box-sizing: border-box;">
+            <p class="productProperty mb-0 mr-2"
+              style="font-size: 14px; color: #000000; font-weight: 600; flex-shrink: 0;margin-right: 0.8rem;">
+              Quantity (Pieces)
+            </p>
+            <div class="stockElement d-flex align-items-center" style="gap: 5px;">
+              <button class="cartIncrement btn btn-sm btn-outline-dark"
+                style="width: 32px; height: 25px; display: flex; align-items: center; justify-content: center;font-weight: 650;">
+                +
+              </button>
+              <p class="productQuantity"
+                style="margin: 0; font-size: 14px; font-weight: 700 ; color: #333; text-align: center; width: 25px; height: 25px; display: flex; align-items: center; justify-content: center; border-top: 1px solid #ccc; border-bottom: 1px solid #ccc;">
+                1
+              </p>
+              <button class="cartDecrement btn btn-sm btn-outline-dark"
+                style="width: 32px; height: 25px; display: flex; align-items: center; justify-content: center;font-weight: 650;">
+                -
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="d-flex justify-content-start" style="width: 100%;">
+          <button class="add-to-cart-button btn btn-dark"
+            style="padding: 4px 14px; border-radius: 4px; cursor: pointer; display: flex; align-items: center; gap: 8px;font-size: smaller;">
+            <i class="fa-solid fa-cart-shopping"></i> Add To Cart
+          </button>
+        </div>
+
+      </article>
+    </div>
+  </template>
+
+
+
+  <!-- WHY TO CHOOSE US SECTION -->
+  <section class="py-5 text-center" >
+    <div class="container " id="about_redirect">
+      <h2 class="font-weight-bold mb-4" style="font-weight: bold ;color: #0a0f41;">Why Choose MavenMart</h2>
+      <p class="text-muted mb-5" style="font-size: medium;font-weight: 500;">Choose MavenMart for a holistic, enriching
+        experience that empowers you to achieve your
+        goals.</p>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <!-- Left Column -->
+        <div class="col-lg-4 col-md-6 d-flex flex-column text-md-right text-center mb-4">
+          <div class="mb-4">
+            <div class="mx-auto d-flex justify-content-center align-items-center"
+              style="width: 60px; height: 60px; background-color: #0a0f41; border-radius: 50%;">
+              <p class=" m-0" style="font-size: 24px; color: white;">1</p>
+            </div>
+            <h3 class="mt-3" style="color: #0a0f41;font-weight: 550">Wide Selection</h3>
+            <p class="text-muted" style="font-weight: 450;">MavenMart offers a diverse range of gadgets, from
+              smartphones to smart home devices,
+              ensuring you find what you need to elevate your lifestyle and meet your tech requirements.</p>
+          </div>
+
+          <div class="mb-4">
+            <div class="mx-auto d-flex justify-content-center align-items-center"
+              style="width: 60px; height: 60px; background-color: #0a0f41; border-radius: 50%;">
+              <p class=" m-0" style="font-size: 24px; color: white;">2</p>
+            </div>
+            <h3 class="mt-3" style="color: #0a0f41;font-weight: 550">Quality Assurance</h3>
+            <p class="text-muted" style="font-weight: 450;">Every gadget at MavenMart undergoes rigorous quality checks,
+              guaranteeing reliability
+              and performance, so you can shop with confidence knowing you're getting the best.</p>
+          </div>
+
+          <div class="mb-4">
+            <div class="mx-auto d-flex justify-content-center align-items-center"
+              style="width: 60px; height: 60px; background-color: #0a0f41; border-radius: 50%;">
+              <p class=" m-0" style="font-size: 24px; color: white;">3</p>
+            </div>
+            <h3 class="mt-3" style="color: #0a0f41;font-weight: 550">Competitive Prices</h3>
+            <p class="text-muted" style="font-weight: 450;">Enjoy great value with MavenMart's competitive prices on
+              high-quality gadgets, making
+              top-of-the-line technology accessible to all without compromising on quality or performance.</p>
+          </div>
+        </div>
+
+        <!-- Center Image -->
+        <div class="col-lg-4 col-md-12 d-flex justify-content-center align-items-center mb-4">
+          <figure class="position-relative d-flex justify-content-center align-items-center w-100"
+            style="height: 300px;">
+            <img src="./images/why.png" alt="MavenMart" class="img-fluid" style="max-width: 100%; height: auto;">
+            <div class="position-absolute rounded-circle"
+              style="top: 50%; left: 50%; transform: translate(-50%, -50%); width: 70%; max-width: 350px; height: auto; aspect-ratio: 1/1; background-color: rgba(0, 0, 0, 0.2); z-index: -1; animation: pulse 5s linear infinite;">
+            </div>
+          </figure>
+        </div>
+
+        <!-- Right Column -->
+        <div class="col-lg-4 col-md-6 d-flex flex-column text-md-left text-center mb-4">
+          <div class="mb-4">
+            <div class="mx-auto d-flex justify-content-center align-items-center"
+              style="width: 60px; height: 60px; background-color: #0a0f41; border-radius: 50%;">
+              <p class=" m-0" style="font-size: 24px; color: white;">4</p>
+            </div>
+            <h3 class="mt-3" style="color: #0a0f41;font-weight: 550">Expert Guidance</h3>
+            <p class="text-muted" style="font-weight: 450;">Our knowledgeable staff provides expert guidance, helping
+              you choose the right gadget to
+              meet your needs and preferences, ensuring you make informed decisions every step of the way.</p>
+          </div>
+
+          <div class="mb-4">
+            <div class="mx-auto d-flex justify-content-center align-items-center"
+              style="width: 60px; height: 60px; background-color: #0a0f41; border-radius: 50%;">
+              <p class=" m-0" style="font-size: 24px; color: white;">5</p>
+            </div>
+            <h3 class="mt-3" style="color: #0a0f41;font-weight: 550">Convenient Shopping</h3>
+            <p class="text-muted" style="font-weight: 450;">With MavenMart, shopping for gadgets is easy and convenient.
+              Our user-friendly website
+              and secure payment options ensure a seamless experience from browsing to checkout, all from the comfort of
+              your home.</p>
+          </div>
+
+          <div class="mb-4">
+            <div class="mx-auto d-flex justify-content-center align-items-center"
+              style="width: 60px; height: 60px; background-color: #0a0f41; border-radius: 50%;">
+              <p class=" m-0" style="font-size: 24px; color: white;">6</p>
+            </div>
+            <h3 class="mt-3" style="color: #0a0f41;font-weight: 550">Excellent Service</h3>
+            <p class="text-muted" style="font-weight: 450;">MavenMart is committed to providing excellent service to our
+              customers. From prompt
+              assistance with inquiries to efficient handling of orders and deliveries, we prioritize your satisfaction
+              every step of the way.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- CONTACT US -->
+<section class="section-contact" style="padding: 60px 0;" id="contact_redirect">
+  <div class="container text-center">
+    <h1 style="
+        font-size: 2.5rem; 
+        font-weight: 700; 
+        margin-bottom: 30px; 
+        color: #000000; 
+        text-transform: uppercase; 
+        letter-spacing: 1.5px; 
+        position: relative; 
+        display: inline-block; 
+        padding: 10px 20px; 
+        border-radius: 8px;">
+      Contact Us
+      <span style="
+            display: block; 
+            width: 50%; 
+            height: 4px; 
+            position: absolute; 
+            bottom: -10px; 
+            left: 25%;">
+      </span>
+    </h1>
+
+    <p style="font-size: 1.1rem; color: #6c757d; margin-bottom: 40px;">
+      Get in touch with us. We're here to assist you with anything you need.
+    </p>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 mb-4 mb-md-0">
+        <form action="#"
+          style="padding: 40px; border-radius: 12px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);">
+          <div class="mb-4">
+            <label for="username" class="form-label"
+              style="font-weight: 600; color: #495057; margin-bottom: 8px; display: block;">Full
+              Name</label>
+            <input type="text" name="username" id="username" required autocomplete="off"
+              placeholder="Enter your full name" class="form-control"
+              style="border: 1px solid #ced4da; border-radius: 8px; padding: 15px; font-size: 1rem;" />
+          </div>
+
+          <div class="mb-4">
+            <label for="email" class="form-label"
+              style="font-weight: 600; color: #495057; margin-bottom: 8px; display: block;">Email
+              Address</label>
+            <input type="email" name="email" id="email" required autocomplete="off" placeholder="abc@example.com"
+              class="form-control"
+              style="border: 1px solid #ced4da; border-radius: 8px; padding: 15px; font-size: 1rem;" />
+          </div>
+
+          <div class="mb-4">
+            <label for="subject" class="form-label"
+              style="font-weight: 600; color: #495057; margin-bottom: 8px; display: block;">Subject</label>
+            <input type="text" name="subject" id="subject" required autocomplete="off"
+              placeholder="Title of your message" class="form-control"
+              style="border: 1px solid #ced4da; border-radius: 8px; padding: 15px; font-size: 1rem;" />
+          </div>
+
+          <div class="mb-4">
+            <label for="message" class="form-label"
+              style="font-weight: 600; color: #495057; margin-bottom: 8px; display: block;">Message</label>
+            <textarea name="message" id="message" cols="30" rows="6" placeholder="We are always here to help you."
+              class="form-control"
+              style="border: 1px solid #ced4da; border-radius: 8px; padding: 15px; font-size: 1rem;"></textarea>
+          </div>
+
+          <div class="mt-3 text-center">
+            <button type="submit" class="btn btn-outline-success"
+              style=" padding: 12px 24px; font-size: 1rem; font-weight: 600;">
+              Send Message
+            </button>
+          </div>
+        </form>
+      </div>
+      <div class="col-md-6">
+        <div class="contact-map" style="height: 500px;">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3650.984451944857!2d72.59511831519122!3d23.027677095262336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e84ecfd7e4b6d%3A0x82864f64c7f2e05b!2sLal%20Darwaja%2C%20Ahmedabad%2C%20Gujarat%20402005!5e0!3m2!1sen!2sin!4v1696132789686!5m2!1sen!2sin"
+            width="100%" height="100%" style="border: 0; border-radius: 12px;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- FOOTER SECTION -->
+<footer class="section-footer py-5 text-light" style="background-color: #333232;">
+  <div class="container">
+    <div class="row">
+      <!-- Logo and Introduction -->
+      <div class="col-lg-3 mb-4">
+        <div class="mb-3">
+          <img src="./images/logo.avif" alt="logo" class="img-fluid" style="max-width: 150px; border-radius: 50%;">
+        </div>
+        <p class="mb-3">Welcome to MavenMart, your ultimate destination for cutting-edge gadgets!</p>
+        <img src="https://i.postimg.cc/Nj9dgJ98/cards.png" alt="cards" class="img-fluid">
+      </div>
+
+      <!-- Shopping Links -->
+      <div class="col-lg-2 mb-4" style="text-align: center;">
+        <h2 class="font-weight-bold">Shopping</h2>
+        <a href="#" class="d-block text-light mb-2" style="text-decoration: none;">Computer Store</a>
+        <a href="#" class="d-block text-light mb-2" style="text-decoration: none;">Laptop Store</a>
+        <a href="#" class="d-block text-light mb-2" style="text-decoration: none;">Phone Store</a>
+        <a href="#" class="d-block text-light mb-2" style="text-decoration: none;">Tablet Store</a>
+      </div>
+
+      <!-- Useful Links -->
+      <div class="last_footer col-lg-3 mb-4" style="text-align: center;">
+        <h2 class="font-weight-bold">Useful Links</h2>
+        <a href="#home" class="d-block text-light mb-2" style="text-decoration: none;">Home</a>
+        <a href="#about" class="d-block text-light mb-2" style="text-decoration: none;">About</a>
+        <a href="#products" class="d-block text-light mb-2" style="text-decoration: none;">Products</a>
+        <a href="#contact" class="d-block text-light mb-2" style="text-decoration: none;">Contact</a>
+      </div>
+
+
+      <!-- Contact Information -->
+      <div class="col-lg-4 mb-4">
+        <h2 class="font-weight-bold">Contact Information</h2>
+        <p><i class="fa-solid fa-map-marker-alt"></i> Address: Lal Darwaja, Ahmedabad, Gujarat 402005</p>
+        <p><i class="fa-solid fa-phone"></i> Phone: +91 123 456 7890</p>
+        <p><i class="fa-solid fa-envelope"></i> Email: MasirJafri1@gmail.com</p>
+      </div>
+    </div>
+    <div class="bg-secondary text-center py-2">
+      <p class="mb-0">Design and Code by MasirJafri</p>
+    </div>
+    <div class="text-center mt-4">
+      <p>&copy; 2024 MavenMart. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script type="module" src="main.js"></script>
+</body>
+
+</html>
